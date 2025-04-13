@@ -1,0 +1,21 @@
+#root {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 0;
+  text-align: center;
+}
+
+@font-face {
+  font-family: 'Peace Sans';
+  src: url('./assets/PC.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Product Sans';
+  src: url('./assets/PS.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
