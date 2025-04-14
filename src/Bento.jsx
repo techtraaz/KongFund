@@ -23,6 +23,8 @@ export default function Bento(){
                     <div className="bg-[#1F1F1F] w-[745px] h-[400px] rounded-4xl"></div>
                 </div>
 
+                
+
             </div>
 
            
