@@ -8,6 +8,8 @@ import Bento from './Bento'
 import Section3 from './Section3'
 import Section4 from './Section4'
 
+import { Analytics } from "@vercel/analytics/react"
+
 const Wallets = lazy(() => import('./Walltes'))
 const Security = lazy(() => import('./Security'))
 const Last = lazy(() => import('./Last'))
