@@ -1,4 +1,4 @@
-import { useState } from 'react'
+import { useState , lazy , Suspense} from 'react'
 import reactLogo from './assets/react.svg'
 import viteLogo from '/vite.svg'
 import './App.css'
@@ -7,9 +7,11 @@ import Landing from './Landing'
 import Bento from './Bento'
 import Section3 from './Section3'
 import Section4 from './Section4'
-import Wallets from './Walltes'
-import Security from './Security'
-import Last from './Last'
+
+const Wallets = lazy(() => import('./Walltes'))
+const Security = lazy(() => import('./Security'))
+const Last = lazy(() => import('./Last'))
+
 
 
 function App() {
@@ -21,9 +23,21 @@ function App() {
       <Bento/>
       <Section3/>
       <Section4/>
-      <Wallets/>
-      <Security/>
-      <Last/>
+
+      <Suspense fallback={<div>Loading wallets...</div>}>
+        <Wallets />
+      </Suspense>
+
+      <Suspense fallback={<div>Loading security...</div>}>
+        <Security />
+      </Suspense>
+
+      <Suspense fallback={<div>Loading final section...</div>}>
+        <Last />
+      </Suspense>
+
+
+      
     </>
   )
 }
