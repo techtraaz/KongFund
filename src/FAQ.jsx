@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 
 import Plus from './assets/plus.png'
-import Minus from './assets/Minus.png'
+import Minus from './assets/minus.png'
 
 export default function FAQ({faq,answer}){
 
